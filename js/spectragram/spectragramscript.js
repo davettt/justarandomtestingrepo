@@ -1,13 +1,13 @@
-/*script for spectagram*/
+/*script for spectragram*/
 jQuery(document).ready(function($) {
-    jQuery.fn.spectagram.accessData = {
-    accessToken: '',
-    clientID: ''
+    jQuery.fn.spectragram.accessData = {
+    accessToken: 'add-access-token',
+    clientID: 'add-client-id'
 };
     var instaquery = instag.query;
     var instamax = instag.max;
     var instasize = instag.size;
-    $('.instagfeed').spectagram('getUserFeed',{
+    $('.instagrid').spectragram('getUserFeed',{
         query: instaquery,
         max: instamax,
         size: instasize,
