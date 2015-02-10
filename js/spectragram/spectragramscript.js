@@ -4,14 +4,15 @@ jQuery(document).ready(function($) {
     accessToken: 'add-access-token',
     clientID: 'add-client-id'
 };
+    var instamethod = instag.method;
     var instaquery = instag.query;
     var instamax = instag.max;
     var instasize = instag.size;
-    $('.instagrid').spectragram('getUserFeed',{
+    var instaclass = instag.class;
+    $('.'+instaclass).spectragram(instamethod,{
         query: instaquery,
         max: instamax,
         size: instasize,
         wrapEachWith: '<li></li>'
-    }
-    );
+    });
 });
