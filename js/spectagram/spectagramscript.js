@@ -4,10 +4,13 @@ jQuery(document).ready(function($) {
     accessToken: '',
     clientID: ''
 };
+    var instaquery = instag.query;
+    var instamax = instag.max;
+    var instasize = instag.size;
     $('.instagfeed').spectagram('getUserFeed',{
-        query: 'username',
-        max: 9,
-        size:'small',
+        query: instaquery,
+        max: instamax,
+        size: instasize,
         wrapEachWith: '<li></li>'
     }
     );
