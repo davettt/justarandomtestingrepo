@@ -12,7 +12,8 @@ function spectragram_shortcode($atts, $content = null){
         'query' => '',
         'max' => '9',
         'size' => 'small',
-        'class' => 'instagrid'
+        'class' => 'instagrid',
+        'method' => 'getUserFeed'
     ),$atts);
     wp_enqueue_script('spectragram');
     wp_enqueue_script('spectragramscript');
