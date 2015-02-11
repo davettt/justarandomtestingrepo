@@ -2,7 +2,7 @@
 /*demo for functions childtheme file*/
 
 function add_spectragram_files() {
-    wp_register_script('spectragram',get_stylesheet_directory_uri().'/js/spectragram/spectragram.min.js',array('jquery'),'',true);
+    wp_register_script('spectragram',get_stylesheet_directory_uri().'/js/spectragram/spectragram.js',array('jquery'),'',true);
     wp_register_script('spectragramscript',get_stylesheet_directory_uri().'/js/spectragram/spectragramscript.js',array('spectragram'),'',true);
 }
 add_action('wp_enqueue_scripts','add_spectragram_files');
