@@ -38,5 +38,6 @@ function showInfo(data) {
     xaxis: $(this).data("horiz"),
     hiColor: $(this).data("hi")
     };
+    console.log($(this).parent("div").attr("id")),
     Sheetsee.d3PieChart(data,pieOptions);
 }} );
