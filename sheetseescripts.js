@@ -50,11 +50,11 @@ function showInfo(data) {
     labels: "Content Management", 
     units: "Usage", 
     m: [80,80,80,80], 
-    w: sheetseewidth, 
-    h: sheetseeheight, 
-    div: sheetseeid, 
+    w: 500, 
+    h: 400, 
+    div: "sheetseeid", 
     xaxis: "sheetseehoriz",
-    hiColor: sheetseehi
+    hiColor: "#ccc"
     };
     Sheetsee.d3PieChart(data,pieOptions);
 }} );
