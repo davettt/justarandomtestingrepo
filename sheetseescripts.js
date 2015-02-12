@@ -13,8 +13,9 @@ jQuery(document).ready(function($) {
             'sheetseehoriz' : $(this).data("horiz"),
             'sheetseehi' : $(this).data("hi")
         };
-        alert(variables['sheetseeurl']);
+        console.log(variables['sheetseeurl']);
     }
+    /*
         $("span.sheetseepie").each(function(index) {
             var sheetseeurl = $(this).text();
             var sheetseeid = $(this).parent("div").attr("id");
@@ -53,4 +54,4 @@ function showInfo(data) {
     hiColor: sheetseehi
     };
     Sheetsee.d3PieChart(data,pieOptions);
-}} );
+}*/} );
