@@ -36,8 +36,8 @@ function showInfo(data) {
     var sheetseeheight = $("span.sheetseepie").data("height");
     var sheetseehoriz = $("span.sheetseepie").data("horiz");
     var sheetseehi = $("span.sheetseepie").data("hi");
-                console.log(sheetseeurl);
-            console.log(sheetseeid);
+                console.log(sheetseeurl);*/
+            console.log(sheetseeid);/*
             console.log(sheetseelabel);
             console.log(sheetseeunit);
             console.log(sheetseemargin);
