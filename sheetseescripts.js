@@ -2,8 +2,8 @@
 
 jQuery(document).ready(function($) {
         $("span.sheetseepie").each(function(index) {
-            var sheetseeurl = $(this).text();
-            sheetseeid = $(this).parent("div").attr("id");
+            sheetseeurl = $(this).text();
+            var sheetseeid = $(this).parent("div").attr("id");
             var sheetseelabel = $(this).data("label");
             var sheetseeunit = $(this).data("unit");
             var sheetseemargin = $(this).data("margin");
@@ -23,12 +23,13 @@ jQuery(document).ready(function($) {
             $("span.sheetseepie").empty();
             Tabletop.init({ 
                 key: sheetseeurl,
-                callback: showInfo(sheetseeid),
+                callback: showInfo(),
                 simpleSheet: true 
             });
     });
 function showInfo(data,tabletop) {
     var id= sheetseeid;
+    var url= sheetseeurl;
     var pieOptions = {
     labels: $(this).data("label"), 
     units: $(this).data("unit"), 
@@ -41,5 +42,6 @@ function showInfo(data,tabletop) {
     };
     console.log(id);
             console.log(sheetseeid);
+            console.log(url);
     Sheetsee.d3PieChart(data,pieOptions);
 }} );
