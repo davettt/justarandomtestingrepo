@@ -53,8 +53,6 @@ function showInfo(data) {
     w: 500, 
     h: 400, 
     div: "sheetseecharts", 
-    xaxis: "sheetseehoriz",
-    hiColor: "#ccc"
     };
     Sheetsee.d3PieChart(data,pieOptions);
 }} );
