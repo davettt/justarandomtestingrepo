@@ -28,7 +28,6 @@ jQuery(document).ready(function($) {
             });
     });
 function showInfo(data) {
-    var url= sheetseeurl;
     var pieOptions = {
     labels: sheetseelabel, 
     units: sheetseeunit, 
@@ -39,6 +38,5 @@ function showInfo(data) {
     xaxis: sheetseehoriz,
     hiColor: sheetseehi
     };
-            console.log(url);
     Sheetsee.d3PieChart(data,pieOptions);
 }} );
