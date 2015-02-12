@@ -20,9 +20,9 @@ jQuery(document).ready(function($) {
             console.log(sheetseeheight);
             console.log(sheetseehoriz);
             console.log(sheetseehi);
-           // $("span.sheetseepie").empty();
+            $("span.sheetseepie").empty();
             Tabletop.init({ 
-                key: "https://docs.google.com/spreadsheets/d/1gu2f0fKjrHa2GSM_hdl4FHaJW1bKEoZljI25NDfH_QU/pubhtml",
+                key: sheetseeurl,
                 callback: showInfo,
                 simpleSheet: true 
             });
@@ -47,12 +47,14 @@ function showInfo(data) {
             console.log(sheetseehoriz);
             console.log(sheetseehi);
     var pieOptions = {
-    labels: "Content Management", 
-    units: "Usage", 
-    m: [80,80,80,80], 
-    w: 500, 
-    h: 400, 
-    div: "sheetseecharts", 
+    labels: sheetseelabel, 
+    units: sheetseeunit, 
+    m: sheetseemargin, 
+    w: sheetseewidth, 
+    h: sheetseeheight, 
+    div: '#'+sheetseeid, 
+    xaxis: sheetseehoriz,
+    hiColor: sheetseehi
     };
     Sheetsee.d3PieChart(data,pieOptions);
 }} );
