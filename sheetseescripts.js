@@ -28,15 +28,15 @@ jQuery(document).ready(function($) {
             });
     });
 function showInfo(data) {
-    var sheetseeurl = $(this).text();
-    var sheetseeid = $(this).parent("div").attr("id");
-    var sheetseelabel = $(this).data("label");
-    var sheetseeunit = $(this).data("unit");
-    var sheetseemargin = $(this).data("margin");
-    var sheetseewidth = $(this).data("width");
-    var sheetseeheight = $(this).data("height");
-    var sheetseehoriz = $(this).data("horiz");
-    var sheetseehi = $(this).data("hi");
+    var sheetseeurl = $("span.sheetseepie").text();
+    var sheetseeid = $("span.sheetseepie").parent("div").attr("id");
+    var sheetseelabel = $("span.sheetseepie").data("label");
+    var sheetseeunit = $("span.sheetseepie").data("unit");
+    var sheetseemargin = $("span.sheetseepie").data("margin");
+    var sheetseewidth = $("span.sheetseepie").data("width");
+    var sheetseeheight = $("span.sheetseepie").data("height");
+    var sheetseehoriz = $("span.sheetseepie").data("horiz");
+    var sheetseehi = $("span.sheetseepie").data("hi");
                 console.log(sheetseeurl);
             console.log(sheetseeid);
             console.log(sheetseelabel);
