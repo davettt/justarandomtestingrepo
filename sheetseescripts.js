@@ -21,7 +21,7 @@ jQuery(document).ready(function($) {
             console.log(sheetseehoriz);
             console.log(sheetseehi);
         });
-        $('div#sheetseecharts > span').empty();
+        $("span.sheetseepie").empty();
    /* var public_spreadsheet_url = 'https://docs.google.com/spreadsheets/d/1gu2f0fKjrHa2GSM_hdl4FHaJW1bKEoZljI25NDfH_QU/pubhtml';
     Tabletop.init({ 
         key: public_spreadsheet_url,
