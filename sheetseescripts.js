@@ -22,7 +22,7 @@ jQuery(document).ready(function($) {
             console.log(sheetseehi);
            // $("span.sheetseepie").empty();
             Tabletop.init({ 
-                key: sheetseeurl,
+                key: "https://docs.google.com/spreadsheets/d/1gu2f0fKjrHa2GSM_hdl4FHaJW1bKEoZljI25NDfH_QU/pubhtml",
                 callback: showInfo,
                 simpleSheet: true 
             });
