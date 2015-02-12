@@ -3,7 +3,7 @@
 jQuery(document).ready(function($) {
         $("span.sheetseepie").each(function(index) {
             var sheetseeurl = $(this).text();
-            var sheetseeid = $(this).parent("div").attr("id");
+            sheetseeid = $(this).parent("div").attr("id");
             var sheetseelabel = $(this).data("label");
             var sheetseeunit = $(this).data("unit");
             var sheetseemargin = $(this).data("margin");
