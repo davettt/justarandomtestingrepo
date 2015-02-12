@@ -2,15 +2,15 @@
 
 jQuery(document).ready(function($) {
         $("span.sheetseepie").each(function(index) {
-            sheetseeurl = $(this).text();
-            sheetseeid = $(this).parent("div").attr("id");
-            sheetseelabel = $(this).data("label");
-            sheetseeunit = $(this).data("unit");
-            sheetseemargin = $(this).data("margin");
-            sheetseewidth = $(this).data("width");
-            sheetseeheight = $(this).data("height");
-            sheetseehoriz = $(this).data("horiz");
-            sheetseehi = $(this).data("hi");
+            var sheetseeurl = $(this).text();
+            var sheetseeid = $(this).parent("div").attr("id");
+            var sheetseelabel = $(this).data("label");
+            var sheetseeunit = $(this).data("unit");
+            var sheetseemargin = $(this).data("margin");
+            var sheetseewidth = $(this).data("width");
+            var sheetseeheight = $(this).data("height");
+            var sheetseehoriz = $(this).data("horiz");
+            var sheetseehi = $(this).data("hi");
             console.log(sheetseeurl);
             console.log(sheetseeid);
             console.log(sheetseelabel);
@@ -20,6 +20,12 @@ jQuery(document).ready(function($) {
             console.log(sheetseeheight);
             console.log(sheetseehoriz);
             console.log(sheetseehi);
+            var myObject = {
+                sheetseeurl : sheetseeurl,
+                sheetseeid : function() {
+                    return sheetseeid;
+                }
+            };
             $("span.sheetseepie").empty();
             Tabletop.init({ 
                 key: sheetseeurl,
@@ -28,6 +34,8 @@ jQuery(document).ready(function($) {
             });
     });
 function showInfo(data) {
+    console.log(myObject.sheetseeid());
+    console.log(myObject.sheetseeurl);
     var pieOptions = {
     labels: sheetseelabel, 
     units: sheetseeunit, 
