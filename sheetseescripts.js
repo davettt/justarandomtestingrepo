@@ -23,12 +23,12 @@ jQuery(document).ready(function($) {
             $("span.sheetseepie").empty();
             Tabletop.init({ 
                 key: sheetseeurl,
-                callback: showInfo(index),
+                callback: showInfo(data, sheetseeid),
                 simpleSheet: true 
             });
     });
-function showInfo(data) {
-    var id=$(this).parent("div").attr("id");
+function showInfo(data,sheetseeid) {
+    var id= sheetseeid;
     var pieOptions = {
     labels: $(this).data("label"), 
     units: $(this).data("unit"), 
