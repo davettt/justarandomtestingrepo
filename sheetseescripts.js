@@ -27,7 +27,7 @@ jQuery(document).ready(function($) {
                 simpleSheet: true 
             });
 function showInfo(data) {
-    var sheetseeurl = $("span.sheetseepie").text();
+    /*var sheetseeurl = $("span.sheetseepie").text();
     var sheetseeid = $("span.sheetseepie").parent("div").attr("id");
     var sheetseelabel = $("span.sheetseepie").data("label");
     var sheetseeunit = $("span.sheetseepie").data("unit");
@@ -44,7 +44,7 @@ function showInfo(data) {
             console.log(sheetseewidth);
             console.log(sheetseeheight);
             console.log(sheetseehoriz);
-            console.log(sheetseehi);
+            console.log(sheetseehi);*/
     var pieOptions = {
     labels: sheetseelabel, 
     units: sheetseeunit, 
