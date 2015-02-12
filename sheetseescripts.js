@@ -23,7 +23,7 @@ jQuery(document).ready(function($) {
             $("span.sheetseepie").empty();
             Tabletop.init({ 
                 key: sheetseeurl,
-                callback: showInfo,
+                callback: showInfo(index),
                 simpleSheet: true 
             });
     });
