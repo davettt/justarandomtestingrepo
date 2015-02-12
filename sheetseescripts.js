@@ -47,13 +47,13 @@ function showInfo(data) {
             console.log(sheetseehoriz);
             console.log(sheetseehi);
     var pieOptions = {
-    labels: sheetseelabel, 
-    units: sheetseeunit, 
-    m: sheetseemargin, 
+    labels: "Content Management", 
+    units: "Usage", 
+    m: [80,80,80,80], 
     w: sheetseewidth, 
     h: sheetseeheight, 
     div: sheetseeid, 
-    xaxis: sheetseehoriz,
+    xaxis: "sheetseehoriz",
     hiColor: sheetseehi
     };
     Sheetsee.d3PieChart(data,pieOptions);
