@@ -3,17 +3,17 @@
 jQuery(document).ready(function($) {
     if ($("span.sheetseepie")[0]){
         var variables = {
-            sheetseeurl : $(this).text(),
-            sheetseeid : $(this).parent("div").attr("id"),
-            sheetseelabel : $(this).data("label"),
-            sheetseeunit : $(this).data("unit"),
-            sheetseemargin : $(this).data("margin"),
-            sheetseewidth : $(this).data("width"),
-            sheetseeheight : $(this).data("height"),
-            sheetseehoriz : $(this).data("horiz"),
-            sheetseehi : $(this).data("hi")
+            'sheetseeurl' : $(this).text(),
+            'sheetseeid' : $(this).parent("div").attr("id"),
+            'sheetseelabel' : $(this).data("label"),
+            'sheetseeunit' : $(this).data("unit"),
+            'sheetseemargin' : $(this).data("margin"),
+            'sheetseewidth' : $(this).data("width"),
+            'sheetseeheight' : $(this).data("height"),
+            'sheetseehoriz' : $(this).data("horiz"),
+            'sheetseehi' : $(this).data("hi")
         };
-        alert(variables["sheetseeurl"]);
+        alert(variables['sheetseeurl']);
     }
         $("span.sheetseepie").each(function(index) {
             var sheetseeurl = $(this).text();
