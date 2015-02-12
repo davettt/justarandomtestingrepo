@@ -24,8 +24,6 @@ jQuery(document).ready(function($) {
             Tabletop.init({ 
                 key: sheetseeurl,
                 callback: function(data) {
-    console.log(myObject.sheetseeid());
-    console.log(myObject.sheetseeurl);
     var pieOptions = {
     labels: sheetseelabel, 
     units: sheetseeunit, 
