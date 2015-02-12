@@ -28,6 +28,7 @@ jQuery(document).ready(function($) {
             });
     });
 function showInfo(data) {
+    var id=$(this).parent("div").attr("id");
     var pieOptions = {
     labels: $(this).data("label"), 
     units: $(this).data("unit"), 
@@ -38,6 +39,6 @@ function showInfo(data) {
     xaxis: $(this).data("horiz"),
     hiColor: $(this).data("hi")
     };
-    console.log($(this).parent("div").attr("id")),
+    console.log(id),
     Sheetsee.d3PieChart(data,pieOptions);
 }} );
