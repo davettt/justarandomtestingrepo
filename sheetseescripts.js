@@ -27,7 +27,7 @@ jQuery(document).ready(function($) {
                 simpleSheet: true 
             });
     });
-function showInfo(data,sheetseeid) {
+function showInfo(data,tabletop) {
     var id= sheetseeid;
     var pieOptions = {
     labels: $(this).data("label"), 
@@ -39,6 +39,7 @@ function showInfo(data,sheetseeid) {
     xaxis: $(this).data("horiz"),
     hiColor: $(this).data("hi")
     };
-    console.log(id),
+    console.log(id);
+            console.log(sheetseeid);
     Sheetsee.d3PieChart(data,pieOptions);
 }} );
