@@ -28,6 +28,7 @@ jQuery(document).ready(function($) {
             });
     });
 function showInfo(data) {
+    var sheetseelabel = $(this).data("label");
     var pieOptions = {
     labels: sheetseelabel, 
     units: sheetseeunit, 
