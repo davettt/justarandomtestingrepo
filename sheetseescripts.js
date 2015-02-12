@@ -1,7 +1,6 @@
 /* script for Sheetsee shortcode */
 
 jQuery(document).ready(function($) {
-    if ($("span.sheetseepie").length()) {
         $("span.sheetseepie").each(function(index) {
             var sheetseeurl = $(this).text();
             var sheetseeid = $(this).parent("div").attr("id");
@@ -32,4 +31,4 @@ function showInfo(data) {
     hiColor: "#14ECC8"
     };
     Sheetsee.d3PieChart(data,pieOptions);
-}*/}} );
+}*/} );
