@@ -20,7 +20,6 @@ jQuery(document).ready(function($) {
             console.log(sheetseeheight);
             console.log(sheetseehoriz);
             console.log(sheetseehi);
-            $("span.sheetseepie").empty();
             Tabletop.init({ 
                 key: sheetseeurl,
                 callback: showInfo,
@@ -57,4 +56,5 @@ function showInfo(data) {
     hiColor: sheetseehi
     };
     Sheetsee.d3PieChart(data,pieOptions);
-}} );
+}
+            $("span.sheetseepie").empty();} );
