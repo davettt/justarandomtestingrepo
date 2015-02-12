@@ -30,13 +30,13 @@ jQuery(document).ready(function($) {
 function showInfo(data) {
     var pieOptions = {
     labels: $(this).data("label"), 
-    units: sheetseeunit, 
-    m: sheetseemargin, 
-    w: sheetseewidth, 
-    h: sheetseeheight, 
-    div: sheetseeid, 
-    xaxis: sheetseehoriz,
-    hiColor: sheetseehi
+    units: $(this).data("unit"), 
+    m: $(this).data("margin"), 
+    w: $(this).data("width"), 
+    h: $(this).data("height"), 
+    div: $(this).parent("div").attr("id"), 
+    xaxis: $(this).data("horiz"),
+    hiColor: $(this).data("hi")
     };
     Sheetsee.d3PieChart(data,pieOptions);
 }} );
