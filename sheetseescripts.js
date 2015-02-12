@@ -20,7 +20,7 @@ jQuery(document).ready(function($) {
             console.log(sheetseeheight);
             console.log(sheetseehoriz);
             console.log(sheetseehi);
-            $("span.sheetseepie").empty();
+           // $("span.sheetseepie").empty();
             Tabletop.init({ 
                 key: sheetseeurl,
                 callback: showInfo,
