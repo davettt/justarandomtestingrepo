@@ -26,7 +26,8 @@ jQuery(document).ready(function($) {
                 callback: showInfo,
                 simpleSheet: true 
             });
-            function showInfo(data) {
+    });
+function showInfo(data) {
     var pieOptions = {
     labels: sheetseelabel, 
     units: sheetseeunit, 
@@ -38,6 +39,4 @@ jQuery(document).ready(function($) {
     hiColor: sheetseehi
     };
     Sheetsee.d3PieChart(data,pieOptions);
-}
-    });
-} );
+}} );
