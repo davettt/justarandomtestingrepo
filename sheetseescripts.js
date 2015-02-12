@@ -29,7 +29,7 @@ jQuery(document).ready(function($) {
     });
 function showInfo(data) {
     var pieOptions = {
-    labels: sheetseelabel , 
+    labels: $(this).data("label"), 
     units: sheetseeunit, 
     m: sheetseemargin, 
     w: sheetseewidth, 
