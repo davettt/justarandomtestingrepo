@@ -52,7 +52,7 @@ function showInfo(data) {
     m: [80,80,80,80], 
     w: 500, 
     h: 400, 
-    div: sheetseeid, 
+    div: "sheetseecharts", 
     xaxis: "sheetseehoriz",
     hiColor: "#ccc"
     };
