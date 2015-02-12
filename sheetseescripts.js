@@ -1,7 +1,7 @@
 /* script for Sheetsee shortcode */
 
 jQuery(document).ready(function($) {
-    if ($("span.sheetseepie").exists()) {
+    if ($("span.sheetseepie").length()) {
         $("span.sheetseepie").each(function(index) {
             var sheetseeurl = $(this).text();
             var sheetseeid = $(this).parent("div").attr("id");
