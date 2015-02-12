@@ -20,20 +20,10 @@ jQuery(document).ready(function($) {
             console.log(sheetseeheight);
             console.log(sheetseehoriz);
             console.log(sheetseehi);
-            var myObject = {
-                sheetseeurl : sheetseeurl,
-                sheetseeid : function() {
-                    return sheetseeid;
-                }
-            };
             $("span.sheetseepie").empty();
             Tabletop.init({ 
                 key: sheetseeurl,
-                callback: showInfo,
-                simpleSheet: true 
-            });
-    });
-function showInfo(data) {
+                callback: function(data) {
     console.log(myObject.sheetseeid());
     console.log(myObject.sheetseeurl);
     var pieOptions = {
@@ -47,4 +37,8 @@ function showInfo(data) {
     hiColor: sheetseehi
     };
     Sheetsee.d3PieChart(data,pieOptions);
-}} );
+},
+                simpleSheet: true 
+            });
+    });
+} );
