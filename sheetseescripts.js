@@ -3,14 +3,14 @@
 jQuery(document).ready(function($) {
         $("span.sheetseepie").each(function(index) {
             sheetseeurl = $(this).text();
-            var sheetseeid = $(this).parent("div").attr("id");
-            var sheetseelabel = $(this).data("label");
-            var sheetseeunit = $(this).data("unit");
-            var sheetseemargin = $(this).data("margin");
-            var sheetseewidth = $(this).data("width");
-            var sheetseeheight = $(this).data("height");
-            var sheetseehoriz = $(this).data("horiz");
-            var sheetseehi = $(this).data("hi");
+            sheetseeid = $(this).parent("div").attr("id");
+            sheetseelabel = $(this).data("label");
+            sheetseeunit = $(this).data("unit");
+            sheetseemargin = $(this).data("margin");
+            sheetseewidth = $(this).data("width");
+            sheetseeheight = $(this).data("height");
+            sheetseehoriz = $(this).data("horiz");
+            sheetseehi = $(this).data("hi");
             console.log(sheetseeurl);
             console.log(sheetseeid);
             console.log(sheetseelabel);
@@ -30,14 +30,14 @@ jQuery(document).ready(function($) {
 function showInfo(data) {
     var url= sheetseeurl;
     var pieOptions = {
-    labels: $(this).data("label"), 
-    units: $(this).data("unit"), 
-    m: $(this).data("margin"), 
-    w: $(this).data("width"), 
-    h: $(this).data("height"), 
-    div: $(this).parent("div").attr("id"), 
-    xaxis: $(this).data("horiz"),
-    hiColor: $(this).data("hi")
+    labels: sheetseelabel, 
+    units: sheetseeunit, 
+    m: sheetseemargin, 
+    w: sheetseewidth, 
+    h: sheetseeheight, 
+    div: sheetseeid, 
+    xaxis: sheetseehoriz,
+    hiColor: sheetseehi
     };
             console.log(url);
     Sheetsee.d3PieChart(data,pieOptions);
