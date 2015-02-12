@@ -21,11 +21,11 @@ jQuery(document).ready(function($) {
             console.log(sheetseehoriz);
             console.log(sheetseehi);
             $("span.sheetseepie").empty();
-            Tabletop.init({ 
+            /*Tabletop.init({ 
                 key: sheetseeurl,
                 callback: showInfo,
                 simpleSheet: true 
-            });
+            });*/
     });/*
 function showInfo(data) {
     var pieOptions = {
