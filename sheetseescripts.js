@@ -23,7 +23,12 @@ jQuery(document).ready(function($) {
             $("span.sheetseepie").empty();
             Tabletop.init({ 
                 key: sheetseeurl,
-                callback: function(data) {
+                callback: showInfo,
+                simpleSheet: true 
+            });
+            showInfo;
+    });
+function showInfo(data) {
     var pieOptions = {
     labels: sheetseelabel, 
     units: sheetseeunit, 
@@ -35,8 +40,4 @@ jQuery(document).ready(function($) {
     hiColor: sheetseehi
     };
     Sheetsee.d3PieChart(data,pieOptions);
-},
-                simpleSheet: true 
-            });
-    });
-} );
+}} );
