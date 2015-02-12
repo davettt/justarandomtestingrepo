@@ -26,7 +26,6 @@ jQuery(document).ready(function($) {
                 callback: showInfo,
                 simpleSheet: true 
             });
-    });
 function showInfo(data) {
     var sheetseeurl = $("span.sheetseepie").text();
     var sheetseeid = $("span.sheetseepie").parent("div").attr("id");
@@ -57,4 +56,6 @@ function showInfo(data) {
     hiColor: sheetseehi
     };
     Sheetsee.d3PieChart(data,pieOptions);
-}} );
+    
+}    });
+} );
