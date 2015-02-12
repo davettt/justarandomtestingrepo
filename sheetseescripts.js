@@ -39,12 +39,12 @@ function showInfo(data) {
     var sheetseehi = $("span.sheetseepie").data("hi");
                 console.log(sheetseeurl);
             console.log(sheetseeid);
-            console.log(sheetseelabel);
+            /*console.log(sheetseelabel);
             console.log(sheetseeunit);
             console.log(sheetseemargin);
             console.log(sheetseewidth);
             console.log(sheetseeheight);
-            console.log(sheetseehoriz);
+            console.log(sheetseehoriz);*/
             console.log(sheetseehi);
     var pieOptions = {
     labels: sheetseelabel, 
