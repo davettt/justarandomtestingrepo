@@ -20,22 +20,23 @@ jQuery(document).ready(function($) {
             console.log(sheetseeheight);
             console.log(sheetseehoriz);
             console.log(sheetseehi);
-        });
-        $("span.sheetseepie").empty();
-   /* var public_spreadsheet_url = 'https://docs.google.com/spreadsheets/d/1gu2f0fKjrHa2GSM_hdl4FHaJW1bKEoZljI25NDfH_QU/pubhtml';
-    Tabletop.init({ 
-        key: public_spreadsheet_url,
-        callback: showInfo,
-        simpleSheet: true 
+            $("span.sheetseepie").empty();
+            Tabletop.init({ 
+                key: sheetseeurl,
+                callback: showInfo,
+                simpleSheet: true 
+            });
     });
 function showInfo(data) {
     var pieOptions = {
-    labels: "Content Management", 
-    units: "Usage", 
-    m: [80, 80, 80, 80], 
-    w: 600, h: 400, 
-    div: "#hello", 
-    hiColor: "#14ECC8"
+    labels: sheetseelabel , 
+    units: sheetseeunit, 
+    m: sheetseemargin, 
+    w: sheetseewidth, 
+    h: sheetseeheight, 
+    div: sheetseeid, 
+    xaxis: sheetseehoriz,
+    hiColor: sheetseehi
     };
     Sheetsee.d3PieChart(data,pieOptions);
-}*/} );
+}} );
