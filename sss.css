@@ -34,7 +34,7 @@ input {background-color: transparent; padding: 0px;}
 /* Pie Chart */
 
 .arc path { stroke: #fff;}
-[id^=sheetseecharts] {height: 600px; max-width: 500px; background: #F8CDCD;}
+[id^=sheetseecharts] {height: 600px; max-width: 800px; background: #E1E1E1;}
 
 /* Line Chart */
 
