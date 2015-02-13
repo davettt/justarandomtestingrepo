@@ -1601,7 +1601,7 @@ module.exports.d3PieChart = function(data, options) {
   var selectedText = d3.selectAll(textSelector)
   selectedText.transition()
     .duration(200)
-    .style("font-size", "12px").style("font-weight", "normal").style("fill", function(d) { return d.hexcolor })
+    .style("font-size", "10px").style("font-weight", "normal").style("fill", function(d) { return d.hexcolor })
   }
 
   var g = svg.selectAll(".arc")
@@ -4802,14 +4802,14 @@ d3 = function() {
     return p;
   }
   function d3_geo_conicEqualArea(φ0, φ1) {
-    var sinφ0 = Math.sin(φ0), n = (sinφ0 + Math.sin(φ1)) / 2, C = 1 + sinφ0 * (2 * n - sinφ0), �?0 = Math.sqrt(C) / n;
+    var sinφ0 = Math.sin(φ0), n = (sinφ0 + Math.sin(φ1)) / 2, C = 1 + sinφ0 * (2 * n - sinφ0), ρ0 = Math.sqrt(C) / n;
     function forward(λ, φ) {
-      var �? = Math.sqrt(C - 2 * n * Math.sin(φ)) / n;
-      return [ �? * Math.sin(λ *= n), �?0 - �? * Math.cos(λ) ];
+      var ρ = Math.sqrt(C - 2 * n * Math.sin(φ)) / n;
+      return [ ρ * Math.sin(λ *= n), ρ0 - ρ * Math.cos(λ) ];
     }
     forward.invert = function(x, y) {
-      var �?0_y = �?0 - y;
-      return [ Math.atan2(x, �?0_y) / n, d3_asin((C - (x * x + �?0_y * �?0_y) * n * n) / (2 * n)) ];
+      var ρ0_y = ρ0 - y;
+      return [ Math.atan2(x, ρ0_y) / n, d3_asin((C - (x * x + ρ0_y * ρ0_y) * n * n) / (2 * n)) ];
     };
     return forward;
   }
@@ -5605,15 +5605,15 @@ d3 = function() {
       return [ k * cosφ * Math.sin(λ), k * Math.sin(φ) ];
     }
     azimuthal.invert = function(x, y) {
-      var �? = Math.sqrt(x * x + y * y), c = angle(�?), sinc = Math.sin(c), cosc = Math.cos(c);
-      return [ Math.atan2(x * sinc, �? * cosc), Math.asin(�? && y * sinc / �?) ];
+      var ρ = Math.sqrt(x * x + y * y), c = angle(ρ), sinc = Math.sin(c), cosc = Math.cos(c);
+      return [ Math.atan2(x * sinc, ρ * cosc), Math.asin(ρ && y * sinc / ρ) ];
     };
     return azimuthal;
   }
   var d3_geo_azimuthalEqualArea = d3_geo_azimuthal(function(cosλcosφ) {
     return Math.sqrt(2 / (1 + cosλcosφ));
-  }, function(�?) {
-    return 2 * Math.asin(�? / 2);
+  }, function(ρ) {
+    return 2 * Math.asin(ρ / 2);
   });
   (d3.geo.azimuthalEqualArea = function() {
     return d3_geo_projection(d3_geo_azimuthalEqualArea);
@@ -5631,12 +5631,12 @@ d3 = function() {
     }, n = φ0 === φ1 ? Math.sin(φ0) : Math.log(cosφ0 / Math.cos(φ1)) / Math.log(t(φ1) / t(φ0)), F = cosφ0 * Math.pow(t(φ0), n) / n;
     if (!n) return d3_geo_mercator;
     function forward(λ, φ) {
-      var �? = Math.abs(Math.abs(φ) - π / 2) < ε ? 0 : F / Math.pow(t(φ), n);
-      return [ �? * Math.sin(n * λ), F - �? * Math.cos(n * λ) ];
+      var ρ = Math.abs(Math.abs(φ) - π / 2) < ε ? 0 : F / Math.pow(t(φ), n);
+      return [ ρ * Math.sin(n * λ), F - ρ * Math.cos(n * λ) ];
     }
     forward.invert = function(x, y) {
-      var �?0_y = F - y, �? = d3_sgn(n) * Math.sqrt(x * x + �?0_y * �?0_y);
-      return [ Math.atan2(x, �?0_y) / n, 2 * Math.atan(Math.pow(F / �?, 1 / n)) - π / 2 ];
+      var ρ0_y = F - y, ρ = d3_sgn(n) * Math.sqrt(x * x + ρ0_y * ρ0_y);
+      return [ Math.atan2(x, ρ0_y) / n, 2 * Math.atan(Math.pow(F / ρ, 1 / n)) - π / 2 ];
     };
     return forward;
   }
@@ -5647,12 +5647,12 @@ d3 = function() {
     var cosφ0 = Math.cos(φ0), n = φ0 === φ1 ? Math.sin(φ0) : (cosφ0 - Math.cos(φ1)) / (φ1 - φ0), G = cosφ0 / n + φ0;
     if (Math.abs(n) < ε) return d3_geo_equirectangular;
     function forward(λ, φ) {
-      var �? = G - φ;
-      return [ �? * Math.sin(n * λ), G - �? * Math.cos(n * λ) ];
+      var ρ = G - φ;
+      return [ ρ * Math.sin(n * λ), G - ρ * Math.cos(n * λ) ];
     }
     forward.invert = function(x, y) {
-      var �?0_y = G - y;
-      return [ Math.atan2(x, �?0_y) / n, G - d3_sgn(n) * Math.sqrt(x * x + �?0_y * �?0_y) ];
+      var ρ0_y = G - y;
+      return [ Math.atan2(x, ρ0_y) / n, G - d3_sgn(n) * Math.sqrt(x * x + ρ0_y * ρ0_y) ];
     };
     return forward;
   }
@@ -5706,8 +5706,8 @@ d3 = function() {
   }).raw = d3_geo_orthographic;
   var d3_geo_stereographic = d3_geo_azimuthal(function(cosλcosφ) {
     return 1 / (1 + cosλcosφ);
-  }, function(�?) {
-    return 2 * Math.atan(�?);
+  }, function(ρ) {
+    return 2 * Math.atan(ρ);
   });
   (d3.geo.stereographic = function() {
     return d3_geo_projection(d3_geo_stereographic);
