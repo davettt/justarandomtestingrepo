@@ -1,17 +1,17 @@
 /* script for Sheetsee shortcode */
 
 jQuery(document).ready(function($) {
-        $("span.sheetseepie").each(function(index) {
-            var sheetseeurl = $(this).text();
-            var sheetseeid = $(this).parent("div").attr("id");
-            var sheetseelabel = $(this).data("label");
-            var sheetseeunit = $(this).data("unit");
-            var sheetseemargin = $(this).data("margin");
-            var sheetseewidth = $(this).data("width");
-            var sheetseeheight = $(this).data("height");
-            var sheetseehoriz = $(this).data("horiz");
-            var sheetseehi = $(this).data("hi");
-            console.log(sheetseeurl);
+    $("span.sheetseepie").each(function(index) {
+        var sheetseeurl = $(this).text();
+        var sheetseeid = $(this).parent("div").attr("id");
+        var sheetseelabel = $(this).data("label");
+        var sheetseeunit = $(this).data("unit");
+        var sheetseemargin = $(this).data("margin");
+        var sheetseewidth = $(this).data("width");
+        var sheetseeheight = $(this).data("height");
+        var sheetseehoriz = $(this).data("horiz");
+        var sheetseehi = $(this).data("hi");
+            console.log(sheetseeurl + index);
             console.log(sheetseeid);
             console.log(sheetseelabel);
             console.log(sheetseeunit);
@@ -69,7 +69,7 @@ $("span.sheetseebar").each(function(index) {
             var sheetseehoriz = $(this).data("horiz");
             var sheetseehi = $(this).data("hi");
             console.log(sheetseeurl);
-            console.log(sheetseeid);
+            console.log(sheetseeid + index);
             console.log(sheetseelabel);
             console.log(sheetseeunit);
             console.log(sheetseemargin);
