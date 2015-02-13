@@ -56,6 +56,6 @@ function showInfo(data) {
     hiColor: sheetseehi
     };
     Sheetsee.d3PieChart(data,pieOptions);
-    
+    $("span.sheetseepie").empty();
 }    });
 } );
