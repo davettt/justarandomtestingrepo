@@ -35,7 +35,7 @@ input {background-color: transparent; padding: 0px;}
 
 .arc path { stroke: #fff;}
 [id^=sheetseecharts] {height: 400px; max-width: 600px; /*background: #E1E1E1; */ margin: 15px auto;}
-div > .sheetseeline {height: 900px;}
+div > .sheetseeline {height: 800px;}
 
 /* Line Chart */
 
