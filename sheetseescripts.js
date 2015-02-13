@@ -1,7 +1,7 @@
 /* script for Sheetsee shortcode */
 
 jQuery(document).ready(function($) {
-    $("span.sheetseepie").each(function(index) {
+    $("span.sheetseepie").each(function() {
         var sheetseeurl = $(this).text();
         var sheetseeid = $(this).parent("div").attr("id");
         var sheetseelabel = $(this).data("label");
@@ -11,7 +11,7 @@ jQuery(document).ready(function($) {
         var sheetseeheight = $(this).data("height");
         var sheetseehoriz = $(this).data("horiz");
         var sheetseehi = $(this).data("hi");
-            console.log(sheetseeurl + index);
+            console.log(sheetseeurl);
             console.log(sheetseeid);
             console.log(sheetseelabel);
             console.log(sheetseeunit);
@@ -58,7 +58,7 @@ function showInfo(data) {
     Sheetsee.d3PieChart(data,pieOptions);
     $("span.sheetseepie").empty();
 }    });
-$("span.sheetseebar").each(function(index) {
+$("span.sheetseebar").each(function() {
             var sheetseeurl = $(this).text();
             var sheetseeid = $(this).parent("div").attr("id");
             var sheetseelabel = $(this).data("label");
@@ -69,7 +69,7 @@ $("span.sheetseebar").each(function(index) {
             var sheetseehoriz = $(this).data("horiz");
             var sheetseehi = $(this).data("hi");
             console.log(sheetseeurl);
-            console.log(sheetseeid + index);
+            console.log(sheetseeid);
             console.log(sheetseelabel);
             console.log(sheetseeunit);
             console.log(sheetseemargin);
@@ -115,7 +115,7 @@ function showInfoBar(data) {
     Sheetsee.d3BarChart(data,barOptions);
     $("span.sheetseebar").empty();
 }    });
-$("span.sheetseeline").each(function(index) {
+$("span.sheetseeline").each(function() {
             var sheetseeurl = $(this).text();
             var sheetseeid = $(this).parent("div").attr("id");
             var sheetseelabel = $(this).data("label");
